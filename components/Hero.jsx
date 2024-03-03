@@ -30,10 +30,15 @@ const Hero = () => {
               journey, and what i engege in profesionally.{" "}
             </p>
             {/* buttons */}
-            <div>
-                <Link href={`/contact`} >
-                <Button>Contact Me</Button>
-                </Link >
+            <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0">
+              <Link href={`/contact`}>
+                <Button className="gap-x-2">
+                  Contact Me <Send size={18} />{" "}
+                </Button>
+              </Link>
+              <Button variant="secondary" className="gap-x-2">
+                download CV <Download size={18} />{" "}
+              </Button>
             </div>
           </div>
           {/* image */}
