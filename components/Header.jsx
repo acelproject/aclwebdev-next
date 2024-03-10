@@ -32,7 +32,7 @@ const Header = () => {
       <div className="container mx-auto">
         <div className="flex justify-between">
           <Logo />
-          <div className="flex gap-x-6">
+          <div className="flex items-center gap-x-6">
             {/* nav */}
             <Nav
               containerStyles="hidden xl:flex gap-x-8 items-center"
