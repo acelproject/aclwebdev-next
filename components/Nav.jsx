@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 
 // next hooks
 import { usePathname } from "next/navigation";
+import { signIn, signOut, useSession } from "next-auth/react";
 
 const links = [
   {
@@ -22,6 +23,7 @@ const links = [
 
 export const Nav = ({ containerStyles, linkStyles, underLineStyles }) => {
   const path = usePathname();
+  const { status } = useSession();
   return (
     <nav className={`${containerStyles}`}>
       {links.map((link, i) => (
@@ -38,6 +40,15 @@ export const Nav = ({ containerStyles, linkStyles, underLineStyles }) => {
           {link.name}
         </Link>
       ))}
+      {status === "authenticated" ? (
+        <button className="bg-primary" onClick={() => signOut()}>
+          Logout
+        </button>
+      ) : (
+        <button className="bg-primary" onClick={() => signIn()}>
+          Login
+        </button>
+      )}
     </nav>
   );
 };
