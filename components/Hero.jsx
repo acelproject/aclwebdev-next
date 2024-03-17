@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react";
 import { Button } from "./ui/button";
 import { Download, Send } from "lucide-react";
@@ -13,8 +15,10 @@ import DevImg from "./DevImg";
 import Badge from "./Badge";
 import Socials from "./Socials";
 import Link from "next/link";
+import { useSession } from "next-auth/react";
 
 const Hero = () => {
+  const { data: session, status } = useSession();
   return (
     <section className=" flex justify-center items-center py-12 xl:py-24 h-[100vh] xl:pt-28  bg-hero bg-no-repeat bg-bottom dark:bg-none bg-cover">
       <div className="container mx-auto">
@@ -24,7 +28,11 @@ const Hero = () => {
             <div className="text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]">
               Web developer
             </div>
-            <h1 className="h1 mb-4">Hello, my name is Marchel Lumimpah</h1>
+            {status === "authenticated" ? (
+              <h1 className="h1 mb-4">Hello, my name is {session?.user?.username}</h1>
+            ) : (
+              <h1 className="h1 mb-4">Hello, my name is Marchel Lumimpah</h1>
+            )}
             <p className="subtitel max-w-[490px] mx-auto xl:mx-0">
               Brief description with insights into myself, my vocational
               journey, and what i engege in profesionally.{" "}

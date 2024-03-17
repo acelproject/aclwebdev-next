@@ -37,7 +37,7 @@ const Header = () => {
             <Nav
               containerStyles="hidden xl:flex gap-x-8 items-center"
               linkStyles="relative hover:text-primary transition-all"
-              underLineStyles="absolute left-0 top-full h-[2px] bg-primary w-full"
+              underLineStyles="absolute  h-[2px] bg-primary w-[60%]"
             />
             <ThemeToggler />
             {/* mobile nav */}

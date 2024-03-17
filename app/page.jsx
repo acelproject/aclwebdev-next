@@ -1,7 +1,22 @@
+"use client";
+import { useRouter } from "next/navigation";
 import Hero from "./../components/Hero";
-import Image from "next/image";
+import { useSession } from "next-auth/react";
+import { useEffect } from "react";
 
 export default function Home() {
+  // const { data: session, status } = useSession();
+  // const router = useRouter();
+
+  // useEffect(() => {
+  //   if (status === "unauthenticated") {
+  //     router.push("/login");
+  //   } else {
+  //     if (session !== undefined && session?.user.role !== "admin") {
+  //       router.push("/login");
+  //     }
+  //   }
+  // }, [router, status, session?.user.role, session]);
   return (
     <main className="">
       <Hero />

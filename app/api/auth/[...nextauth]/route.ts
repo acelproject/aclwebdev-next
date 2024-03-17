@@ -1,7 +1,10 @@
+import { login, loginWithGoogle } from "@/lib/firebase/services";
+import { compare } from "bcrypt";
 import { NextAuthOptions } from "next-auth";
 import NextAuth from "next-auth/next";
 
 import CredentialsProvider from "next-auth/providers/credentials";
+import GoogleProvider from "next-auth/providers/google";
 
 const authOptions: NextAuthOptions = {
   session: {
@@ -21,18 +24,22 @@ const authOptions: NextAuthOptions = {
           username: string;
           password: string;
         };
-        const user: any = {
-          id: 1,
-          name: "Admin",
-          username: "admin",
-          role: "admin",
-        };
-        if (username === "admin" && password === "desamatako2024") {
-          return user;
+        const user: any = await login({ username });
+        if (user) {
+          const confirmPass = await compare(password, user.password);
+
+          if (confirmPass) {
+            return user;
+          }
+          return null;
         } else {
           return null;
         }
       },
+    }),
+    GoogleProvider({
+      clientId: process.env.GOOGLE_0AUTH_CLIENT_ID || "",
+      clientSecret: process.env.GOOGLE_0AUTH_CLIENT_SECRET || "",
     }),
   ],
 
@@ -41,6 +48,23 @@ const authOptions: NextAuthOptions = {
       if (account?.provider === "credentials") {
         token.username = user.username;
         token.role = user.role;
+      }
+      if (account?.provider === "google") {
+        const data: any = {
+          username: user.name,
+          email: user.email,
+          type: "google",
+        };
+        await loginWithGoogle(
+          data,
+          (result: { status: boolean; data: any }) => {
+            if (result.status) {
+              token.username = result.data.username;
+              token.email = result.data.email;
+              token.role = result.data.role;
+            }
+          }
+        );
       }
       return token;
     },
@@ -58,7 +82,7 @@ const authOptions: NextAuthOptions = {
 
   pages: {
     signIn: "/login",
-    signOut:"/"
+    signOut: "/",
   },
 };
 

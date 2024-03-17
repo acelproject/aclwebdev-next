@@ -1,48 +1,46 @@
 "use client";
 
-import { signIn } from "next-auth/react";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 const page = () => {
-  const { push } = useRouter();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  const handleLogin = async (e) => {
+  const router = useRouter();
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
     setLoading(true);
-    try {
-      const res = await signIn("credentials", {
-        redirect: false,
+    const res = await fetch("/api/auth/register", {
+      method: "POST",
+      body: JSON.stringify({
         username: e.target.username.value,
+        email: e.target.email.value,
         password: e.target.password.value,
-        callbackUrl: "/projects",
-      });
-      if (!res?.error) {
-        e.target.reset();
-        setLoading(false);
-        push("/projects");
-      } else {
-        setLoading(false);
-        if (res.status === 401) {
-          setError("User email or password invalid!");
-        }
-      }
-    } catch (err) {
-      console.log(err);
+      }),
+    });
+    if (res.status === 200) {
+      e.target.reset()
+      router.push("/login");
+      setLoading(false);
+    } else {
+      setError(`${res.status} Email Allredy Exists`);
+      setLoading(false);
     }
   };
   return (
-    <div className="flex justify-center items-center h-[100vh] ">
+    <div className="flex justify-center items-center h-[100vh] bg-green-400">
       <div>
         {error !== "" && <h1 className="bg-red-500 text-white">{error}</h1>}
-        <h1 className="">Login</h1>
-        <form action="" onSubmit={(e) => handleLogin(e)}>
+        <h1>Register</h1>
+        <form action="" onSubmit={(e) => handleSubmit(e)}>
           <div>
             <label htmlFor="username">User name</label>
             <input type="text" name="username" />
+          </div>
+          <div>
+            <label htmlFor="email">Email</label>
+            <input type="email" name="email" />
           </div>
           <div>
             <label htmlFor="password">Password</label>
@@ -56,23 +54,10 @@ const page = () => {
                   <div>Loading...</div>
                 </div>
               ) : (
-                <div>Login</div>
+                <div>register</div>
               )}
             </button>
           </div>
-          <p>
-            Belum punya akun? silahkan daftar{" "}
-            <Link href={`/register`} className="underline font-semibold">
-              disini
-            </Link>
-          </p>
-          <button
-            type="button"
-            onClick={() => signIn("google",{callbackUrl:"/",redirect:false})}
-            className="underline"
-          >
-            Masuk dengan Google
-          </button>
         </form>
       </div>
     </div>

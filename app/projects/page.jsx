@@ -17,7 +17,11 @@ const Projects = () => {
     }
   }, [router, status, session?.user.role, session]);
 
-  return <div className="pt-20">Projects</div>;
+  return (
+    <div className="pt-20 flex justify-center items-center">
+      <div>text</div>
+    </div>
+  );
 };
 
 export default Projects;

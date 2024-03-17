@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 // next hooks
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { signIn, signOut, useSession } from "next-auth/react";
 
 const links = [
@@ -27,14 +27,18 @@ export const Nav = ({ containerStyles, linkStyles, underLineStyles }) => {
   return (
     <nav className={`${containerStyles}`}>
       {links.map((link, i) => (
-        <Link href={link.path} key={i} className={`${linkStyles}`}>
+        <Link
+          href={link.path}
+          key={i}
+          className={`${linkStyles} flex justify-center`}
+        >
           {link.path === path && (
             <motion.span
               initial={{ y: "-100%" }}
               animate={{ y: 0 }}
               transition={{ type: "tween" }}
               layoutId="underline"
-              className={`${underLineStyles}`}
+              className={`${underLineStyles}  -bottom-1 rounded-sm`}
             />
           )}
           {link.name}
