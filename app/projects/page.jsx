@@ -1,5 +1,7 @@
 "use client";
 import { useSession } from "next-auth/react";
+import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
@@ -43,9 +45,13 @@ const Projects = () => {
   }, [router, status, session?.user.role, session]);
 
   return (
-    <div className="pt-20 flex justify-center items-center">
+    <div className="pt-20 md:flex-row flex-col flex justify-center items-center">
       {myData?.data?.map((item, i) => (
-        <div key={i}>{item.nama}</div>
+        <Link href={`market/detail/${item.id}`} key={i}>
+          <Image src={item.img} alt="" width={300} height={200} priority />
+          <div>nama: {item.nama}</div>
+          <div className="text-3xl">Harga: {item.harga}</div>
+        </Link>
       ))}
     </div>
   );
