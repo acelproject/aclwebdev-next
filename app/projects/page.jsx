@@ -48,9 +48,9 @@ const Projects = () => {
     <div className="pt-20 md:flex-row flex-col flex justify-center items-center">
       {myData?.data?.map((item, i) => (
         <Link href={`market/detail/${item.id}`} key={i}>
-          <Image src={item.img} alt="" width={300} height={200} priority />
-          <div>nama: {item.nama}</div>
-          <div className="text-3xl">Harga: {item.harga}</div>
+          {/* <Image src={item.img} alt="" width={300} height={200} priority /> */}
+          <div>nama: {item.name}</div>
+          <div className="text-3xl">Harga: {item.desc}</div>
         </Link>
       ))}
     </div>
