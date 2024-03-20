@@ -10,7 +10,7 @@ const Projects = () => {
   // const { data: session, status } = useSession();
   // const router = useRouter();
 
-  const { data, error } = useSWR("http://localhost:3000/api/products", fetcher);
+  const { data, error } = useSWR(`${process.env.NEXT_PUBLIC_API_URL}/api/products`, fetcher);
 
   const projects = {
     data: data?.data,
@@ -30,9 +30,8 @@ const Projects = () => {
   return (
     <div className="pt-20 md:flex-row flex-col flex justify-center items-center">
       {projects.data?.length &&
-        projects.data?.map((item, i) => (
+        projects.data?.map((item:any, i:any) => (
           <Link href={`market/detail/${item.id}`} key={i}>
-            {/* <Image src={item.img} alt="" width={300} height={200} priority /> */}
             <div>nama: {item.name}</div>
             <div className="text-3xl">Harga: {item.desc}</div>
           </Link>
