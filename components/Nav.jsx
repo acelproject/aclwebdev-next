@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 // next hooks
 import { usePathname, useRouter } from "next/navigation";
 import { signIn, signOut, useSession } from "next-auth/react";
+import { Button } from "./ui/button";
 
 const links = [
   {
@@ -45,13 +46,23 @@ export const Nav = ({ containerStyles, linkStyles, underLineStyles }) => {
         </Link>
       ))}
       {status === "authenticated" ? (
-        <button className="bg-primary" onClick={() => signOut()}>
-          Logout
-        </button>
+        <Button
+          variant="default"
+          size="costume"
+          className="gap-x-2 px-4 py-2 relative flex items-center"
+          onClick={() => signOut()}
+        >
+          <span className="relative -top-[1px]">Logout</span>
+        </Button>
       ) : (
-        <button className="bg-primary" onClick={() => signIn()}>
-          Login
-        </button>
+        <Button
+          variant="default"
+          size="costume"
+          className="gap-x-2 px-4 py-2 relative flex items-center"
+          onClick={() => signIn()}
+        >
+          <span className="relative -top-[1px]">Login</span>
+        </Button>
       )}
     </nav>
   );

@@ -48,7 +48,7 @@ export async function register(data: {
   if (users.length > 0) {
     return { status: false, statusCode: 400, message: "Email Alredy Exists" };
   } else {
-    data.role = "member";
+    data.role = "admin";
     data.password = await bcrypt.hash(data.password, 10);
     try {
       await addDoc(collection(firestore, "users"), data);
@@ -88,7 +88,7 @@ export async function loginWithGoogle(
   );
   const snapshot = await getDocs(q);
 
-  const user:any = snapshot.docs.map((doc) => ({
+  const user: any = snapshot.docs.map((doc) => ({
     id: doc.id,
     ...doc.data(),
   }));

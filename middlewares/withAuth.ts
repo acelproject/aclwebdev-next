@@ -33,6 +33,14 @@ export default function withAuth(
           return NextResponse.redirect(new URL("/", req.url));
         }
       }
+      // if (status === "unauthenticated") {
+      //   router.push("/login");
+      // }
+      // else {
+      //   if (session !== undefined && session?.user.role !== "admin") {
+      //     router.push("/");
+      //   }
+      // }
     }
     return middleware(req, next);
   };
