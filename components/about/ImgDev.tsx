@@ -4,7 +4,7 @@ import img from "@/public/about/dev-2.png";
 
 const ImgDev = () => {
   return (
-    <div className="overflow-hidden bg-about_svg rounded-full w-[500px] h-[500px]">
+    <div className="overflow-hidden bg-about_shape_light rounded-full w-[500px] h-[500px]">
       <Image src={img} alt="" />
     </div>
   );

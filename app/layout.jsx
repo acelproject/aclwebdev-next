@@ -1,6 +1,6 @@
 "use client";
 
-import { Inter } from "next/font/google";
+import {  Outfit } from "next/font/google";
 import { SessionProvider } from "next-auth/react";
 import "./globals.css";
 
@@ -10,7 +10,7 @@ import Footer from "./../components/Footer";
 // themes provider
 import { ThemeProvider } from "./../components/ThemeProvider";
 
-const inter = Inter({ subsets: ["latin"] });
+const outfit = Outfit({ subsets: ["latin"] });
 
 // export const metadata = {
 //   title: "Create Next App",
@@ -20,7 +20,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={outfit.className}>
         <SessionProvider>
           <ThemeProvider attribute="class" defaultTheme="light">
             <Header />

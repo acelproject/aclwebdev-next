@@ -4,6 +4,7 @@ import Hero from "../components/Hero";
 import { useSession } from "next-auth/react";
 import { useEffect } from "react";
 import { About } from "../components/About";
+import Services from "@/components/Services";
 
 export default function Home() {
   // const { data: session, status } = useSession();
@@ -21,7 +22,8 @@ export default function Home() {
   return (
     <main className="">
       <Hero />
-      <About/>
+      <About />
+      <Services />
     </main>
   );
 }

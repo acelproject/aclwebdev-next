@@ -2,19 +2,22 @@
 module.exports = {
   darkMode: ["class"],
   content: [
-    "./pages/**/*.{js,jsx}",
-    "./components/**/*.{js,jsx}",
-    "./app/**/*.{js,jsx}",
-    "./src/**/*.{js,jsx}",
+    "./pages/**/*.{js,jsx,tsx,ts}",
+    "./components/**/*.{js,jsx,tsx,ts}",
+    "./app/**/*.{js,jsx,tsx,ts}",
+    "./src/**/*.{js,jsx,tsx,ts}",
   ],
   prefix: "",
   theme: {
     container: {
       center: true,
       padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
+    },
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1400px",
     },
     extend: {
       colors: {
