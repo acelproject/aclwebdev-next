@@ -267,7 +267,7 @@ const DummyContent = ({ text, value }: { text: string; value: string }) => {
                       <div className="h-[84px] w-[1px] dark:bg-slate-700 bg-border relative ml-2 ">
                         <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500"></div>
                       </div>
-                      <div>
+                      <div className="flex flex-col gap-y-1">
                         <div className="font-semibold text-xl leading-none">
                           {company}
                         </div>
@@ -303,7 +303,7 @@ const DummyContent = ({ text, value }: { text: string; value: string }) => {
                       <div className="h-[84px] w-[1px] bg-border relative ml-2 ">
                         <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500"></div>
                       </div>
-                      <div>
+                      <div className="flex flex-col gap-y-1">
                         <div className="font-semibold text-xl leading-none">
                           {sekolah}
                         </div>

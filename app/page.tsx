@@ -5,6 +5,7 @@ import { useSession } from "next-auth/react";
 import { useEffect } from "react";
 import { About } from "../components/About";
 import Services from "@/components/Services";
+import Work from "@/components/Work";
 
 export default function Home() {
   // const { data: session, status } = useSession();
@@ -23,7 +24,8 @@ export default function Home() {
     <main className="">
       <Hero />
       <About />
-      <Services />
+      <Services/>
+      <Work/>
     </main>
   );
 }

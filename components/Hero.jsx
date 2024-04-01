@@ -20,9 +20,9 @@ import { useSession } from "next-auth/react";
 const Hero = () => {
   const { data: session, status } = useSession();
   return (
-    <section className=" flex justify-center items-center py-12 xl:py-24 h-[100vh] xl:pt-28  bg-hero bg-no-repeat bg-bottom dark:bg-none bg-cover">
-      <div className="container mx-auto">
-        <div className="flex gap-x-8 justify-between">
+    <section className=" flex justify-center items-center py-12 xl:py-16 h-[100vh]  bg-hero bg-no-repeat bg-bottom dark:bg-none bg-cover">
+      <div className="container mx-auto pt-20">
+        <div className="flex gap-x-8 justify-between  ">
           {/* text */}
           <div className="flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left">
             <div className="text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]">

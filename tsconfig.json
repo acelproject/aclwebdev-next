@@ -30,7 +30,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "tailwind.config.ts", "lib/utils.js"  ],
+, "tailwind.config.ts", "lib/utils.js", "components/Services.jsx", "components/Badge.jsx"  ],
   "exclude": [
     "node_modules"
   ]

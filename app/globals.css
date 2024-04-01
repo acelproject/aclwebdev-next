@@ -62,7 +62,7 @@
 }
 
 .h1 {
-  @apply text-5xl md:text-4xl xl:text-[69px] xl:leading-[80px] tracking-[-2px] font-bold;
+  @apply text-4xl md:text-4xl xl:text-[69px] xl:leading-[80px] tracking-[-2px] font-bold;
 }
 
 .subtitel {
@@ -83,7 +83,7 @@
   -ms-overflow-style: none;
   -webkit-overflow-scrolling: touch;
 }
- 
+
 .no-visible-scrollbar::-webkit-scrollbar {
   display: none;
 }
