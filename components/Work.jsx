@@ -20,7 +20,7 @@ const projectsData = [
     category: "next js",
     name: "Website SMP Negri 2 Tojo Barat",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cummaiores!",
-    linnk: "/",
+    link: "/",
     github: "/",
   },
   {
@@ -28,7 +28,7 @@ const projectsData = [
     category: "next js",
     name: "Website Desa Matako",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
-    linnk: "/",
+    link: "/",
     github: "/",
   },
   {
@@ -36,7 +36,7 @@ const projectsData = [
     category: "laravel",
     name: "Website Desa Matako",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum voluptas !",
-    linnk: "/",
+    link: "/",
     github: "/",
   },
   {
@@ -44,7 +44,7 @@ const projectsData = [
     category: "react js",
     name: "Toko Online",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. !",
-    linnk: "/",
+    link: "/",
     github: "/",
   },
 ];
@@ -55,7 +55,7 @@ const Work = () => {
       <div className="container mx-auto">
         {/* text */}
         <div className="max-w-[400px] mx-auto xl:mx-0 text-center xl:text-left mb-12 xl:h-[400px] flex flex-col justify-center">
-          <h2 className="section-title mb-4">Latest Projects</h2>
+          <h2 className="section-title mb-4 md:text-start text-center md:mx-0 mx-auto ">Latest Projects</h2>
           <p className="subtitle mb-8">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. At aliquam
             ut repellat obcaecati ullam adipisci.

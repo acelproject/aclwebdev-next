@@ -4,6 +4,7 @@ import { Github, Link2Icon } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import { Badge } from "./ui/badge";
 import Image from "next/image";
+import Link from "next/link";
 
 type ProjectProps = {
   project: any;
@@ -22,6 +23,21 @@ const ProjectCard = ({ project }: ProjectProps) => {
             height={250}
             priority
           />
+          {/* btn link */}
+          <div className="flex gap-x-4">
+            <Link
+              href={project.link}
+              className="bg-secondary w-[54px] h-[54px] rounded-full flex justify-center items-center scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-200"
+            >
+              <Link2Icon className="text-white" />
+            </Link>
+            <Link
+              href={project.github}
+              className="bg-secondary w-[54px] h-[54px] rounded-full flex justify-center items-center scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-200"
+            >
+              <FaGithub className="text-white" />
+            </Link>
+          </div>
         </div>
       </CardHeader>
       <div className="h-full px-8 py-6">

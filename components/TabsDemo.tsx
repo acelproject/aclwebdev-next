@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Tabs } from "./ui/tabs";
+import { Tabs } from "./ui/tabs-ternery";
 
 import materialUiLogo from "@/public/about/marterialui.png";
 import shadcnUiLogo from "@/public/about/shadcn.png";

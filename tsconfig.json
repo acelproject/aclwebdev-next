@@ -3,11 +3,8 @@
     "paths": {
       "@/*": ["./*"]
     },
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "target": "es2015",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -29,9 +26,12 @@
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "tailwind.config.ts", "lib/utils.js", "components/Services.jsx", "components/Badge.jsx"  ],
-  "exclude": [
-    "node_modules"
-  ]
+    "**/*.tsx",
+    "tailwind.config.ts",
+    "lib/utils.js",
+    "components/Services.jsx",
+    "components/Badge.jsx",
+    "components/Cta.jsx"
+  ],
+  "exclude": ["node_modules"]
 }
