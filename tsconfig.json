@@ -32,6 +32,6 @@
     "components/Services.jsx",
     "components/Badge.jsx",
     "components/Cta.jsx"
-  ],
+, "components/Form.jsx"  ],
   "exclude": ["node_modules"]
 }

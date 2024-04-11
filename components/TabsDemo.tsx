@@ -30,6 +30,7 @@ import {
 } from "lucide-react";
 import { RiJavascriptFill } from "react-icons/ri";
 
+
 export function TabsDemo() {
   const tabs = [
     {

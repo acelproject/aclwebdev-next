@@ -45,7 +45,7 @@ export const Nav = ({ containerStyles, linkStyles, underLineStyles }) => {
           {link.name}
         </Link>
       ))}
-      {status === "authenticated" ? (
+      {/* {status === "authenticated" ? (
         <Button
           variant="default"
           size="costume"
@@ -63,7 +63,7 @@ export const Nav = ({ containerStyles, linkStyles, underLineStyles }) => {
         >
           <span className="relative -top-[1px]">Login</span>
         </Button>
-      )}
+      )} */}
     </nav>
   );
 };
