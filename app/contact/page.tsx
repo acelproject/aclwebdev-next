@@ -1,10 +1,45 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 
 import { MailIcon, PhoneCall, HomeIcon } from "lucide-react";
 import Form from "@/components/Form";
+import { addDoc, collection } from "firebase/firestore";
+import { db } from "@/lib/firebase/init";
+
+// async function addMessage(name: string, email: string, message: string) {
+//   await addDoc(collection(db, "messages"), {
+//     name: name,
+//     email: email,
+//     message: message,
+//   });
+// }
 
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = () => {
+    // e.preventDefault();
+    // await addMessage(name, email, message);
+
+    // const res = await fetch("/api/contact", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(data),
+    // })
+    // const json = await res.json()
+    // if (json.status === 200) {
+    //   setName("")
+    //   setEmail("")
+    //   setMessage("")
+    // }
+    const url = `https://wa.me/+6285158829251?text=Halo *${name}* 👋%0aPermohonan Surat anda *Diproses*.%0atunggu informasi selanjudnya.%0a%0a%0a${message}%0a%0a%0a~Kantor desa matako&app_absent=0`;
+
+    window.open(url, "_blank");
+  };
   return (
     <section className="py-24">
       <div className="container mx-auto">
@@ -49,7 +84,15 @@ const Contact = () => {
               <div>+628 5258 8292 51</div>
             </div>
           </div>
-          <Form />
+          <Form
+            handleSubmit={handleSubmit}
+            setName={setName}
+            setEmail={setEmail}
+            setMessage={setMessage}
+            name={name}
+            email={email}
+            message={message}
+          />
         </div>
       </div>
     </section>

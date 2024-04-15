@@ -105,3 +105,19 @@ export async function loginWithGoogle(
     });
   }
 }
+
+// export async function addMessage(name:string, email:string, message:string){
+//   try {
+//     const docRef = await addDoc(collection(firestore, "messages"), {
+//       name  :name,
+//       email :email,
+//       message :message,
+//     });
+
+//     console.log("Document writed with ID : ", docRef.id);
+//     return true;
+//   } catch (err) {
+//     alert(err.message);
+//     return false;
+//   }
+// }

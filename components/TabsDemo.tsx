@@ -30,7 +30,6 @@ import {
 } from "lucide-react";
 import { RiJavascriptFill } from "react-icons/ri";
 
-
 export function TabsDemo() {
   const tabs = [
     {
@@ -38,9 +37,7 @@ export function TabsDemo() {
       value: "personal",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl text-xl md:text-4xl p-10 font-bold text-slate-700 dark:text-white dark:bg-secondary bg-white border shadow-md">
-          <p className="mb-4">
-            kualitas layanan tak tertandingi selama lebih dari 3 tahun
-          </p>
+          <p className="mb-4">Yuk, berkenalan Dengan Saya!</p>
           <DummyContent
             text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ex sit accusamus iusto quod qui laboriosam id dolor commodi rerum?"
             value="personal"
@@ -53,7 +50,7 @@ export function TabsDemo() {
       value: "qual",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl text-xl md:text-4xl p-10 font-bold text-slate-700 dark:text-white dark:bg-secondary bg-white border shadow-md">
-          <p className="mb-4">My Awesome Journey</p>
+          <p className="mb-4">Perjalanan Karir</p>
           <DummyContent
             text="Lorem ipsum dolor sit amet consectetur adipisicing elit. A eius similique beatae. Expedita eaque facere laudantium, repudiandae consequatur iure illo? konten 2"
             value="qual"
@@ -66,7 +63,7 @@ export function TabsDemo() {
       value: "skills",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl text-xl md:text-4xl p-10 font-bold text-slate-700 dark:text-white dark:bg-secondary bg-white border shadow-md">
-          <p className="mb-4">Tools I use everyday</p>
+          <p className="mb-4">Skill Yang Dikuasai</p>
           <DummyContent
             text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque corrupti ratione quasi quas, commodi quos."
             value=""
