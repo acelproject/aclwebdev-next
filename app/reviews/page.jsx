@@ -14,7 +14,7 @@ const ReviewsPage = () => {
         const res = {
           name: e.target.name.value,
           job: e.target.job.value,
-          avatar:e.target.avatar.value,
+          // avatar:e.target.avatar.value,
           review: e.target.review.value,
         };
         if (!res.name) {
