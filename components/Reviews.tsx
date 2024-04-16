@@ -95,16 +95,16 @@ const Reviews = () => {
             1400: { slidesPerView: 3 },
           }}
           spaceBetween={30}
-          modules={[Navigation,Pagination]}
-          pagination={{clickable: true,el:".my-pagination"}}
+          modules={[Navigation, Pagination]}
+          pagination={{ clickable: true, el: ".my-pagination" }}
           className="h-max"
         >
           {data?.data.map((person: any, i: any) => {
             return (
               <SwiperSlide key={i}>
-                <Card className="bg-white dark:bg-secondary/40 p-8 min-h-[250px]">
+                <Card className="bg-white dark:bg-secondary/40 p-8 flex flex-col items-start  min-h-[250px]">
                   <CardHeader>
-                    <div className="flex items-center gap-x-4">
+                    <div className="flex items-center gap-x-4 ">
                       {/* image */}
                       <Image
                         src={noAvatar}
@@ -121,16 +121,14 @@ const Reviews = () => {
                       </div>
                     </div>
                   </CardHeader>
-                  <CardDescription className="text-lg text-muted-foreground">
+                  <CardDescription className="text-lg text-muted-foreground ml-9 w-30">
                     {person.review}
                   </CardDescription>
                 </Card>
               </SwiperSlide>
             );
           })}
-          <div className="md:mt-10 mt-7 flex justify-center gap-x-5">
-            <div className="my-pagination  flex gap-x-2"></div>
-          </div>
+          <div className="my-pagination mt-7  flex justify-center"></div>
         </Swiper>
         <div className="flex justify-center mt-7 md:mt-12">
           <Link

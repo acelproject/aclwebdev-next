@@ -10,17 +10,17 @@ const Form = ({handleSubmit,setName,setEmail,setMessage,name,email,message}) => 
     <form action="" className="flex flex-col gap-y-4">
         {/* input */}
         <div className="relative flex items-center">
-            <Input type="name" id="name" placeholder="Your Name, Example: Marchel" value={name} onChange={(e)=>setName(e.target.value)} />
+            <Input type="name" id="name" placeholder="Name, Example: Marchel" value={name} onChange={(e)=>setName(e.target.value)} />
             <User className="absolute right-6 " size={20}/>
         </div>
         {/* input */}
         <div className="relative flex items-center">
-            <Input type="email" id="email" placeholder="Your Email, Example: john@gmail.com" value={email} onChange={(e)=>setEmail(e.target.value)} />
+            <Input type="email" id="email" placeholder="Email, Example: john@gmail.com" value={email} onChange={(e)=>setEmail(e.target.value)} />
             <MailIcon className="absolute right-6 " size={20}/>
         </div>
         {/* textarea */}
         <div className="relative flex items-center">
-            <Textarea placeholder="Your Message, Example: Hey, I Wanna Collaborate Because I Have A Project" value={message}  onChange={(e)=>setMessage(e.target.value)} />
+            <Textarea placeholder="Message, Example: Hey, I Wanna Collaborate Because I Have A Project" value={message}  onChange={(e)=>setMessage(e.target.value)} />
             <MessageSquare className="absolute top-4 right-6 " size={20}/>
         </div>
 

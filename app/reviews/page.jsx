@@ -60,38 +60,32 @@ const ReviewsPage = () => {
     }
   };
   return (
-    <div className="py-24 w-6/12 mx-auto">
-      <h1 className="text-2xl">Add Reviews</h1>
+    <div className="py-28 md:w-6/12 w-10/12 mx-auto">
+      <h1 className="text-2xl text-center">Add Reviews</h1>
       <form action="" onSubmit={handleSubmit}>
+        <div className="flex flex-col gap-y-4 mt-10">
         <div className="mb-4">
-          <label className="block mb-2" htmlFor="name">
-            Name
-          </label>
-          <Input name="name" />
+          <Input name="name" placeholder="Name"/>
         </div>
         <div className="mb-4">
-          <label className="block mb-2" htmlFor="wisata">
-            Job
-          </label>
-          <Input name="job" />
+
+          <Input name="job"  placeholder="Job"/>
         </div>
         {/* <div className='mb-4'>
                 <label className='block mb-2' htmlFor='lokasi'>img</label>
                 <Input name="avatar" />
             </div> */}
         <div className="mb-4">
-          <label className="block mb-2" htmlFor="lokasi">
-            Review
-          </label>
-          <Textarea name="review" />
+          <Textarea name="review"  placeholder="Review" />
         </div>
-        <div className="mt-10">
+        </div>
+        <div className="mt-10 w-full flex justify-center">
           <button
-            className="bg-primary p-2 rounded-md text-white"
+            className="bg-primary px-4 py-3 mx-auto rounded-full text-white"
             type="submit"
           >
             {isLoading ? (
-              <div className="flex gap-2 items-center">
+              <div className="flex gap-2 items-center ">
                 <div className="animate-spin h-5 w-5 bg-transparent border-[4px] rounded-full border-slate-400 border-l-slate-100"></div>
                 <div>Loading...</div>
               </div>
