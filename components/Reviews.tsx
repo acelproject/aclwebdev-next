@@ -129,7 +129,7 @@ const Reviews = () => {
             );
           })}
           <div className="md:mt-10 mt-7 flex justify-center gap-x-5">
-            <div className="my-pagination w-auto mx-0 bg-transparent flex gap-x-2 "></div>
+            <div className="my-pagination  flex gap-x-2"></div>
           </div>
         </Swiper>
         <div className="flex justify-center mt-7 md:mt-12">
