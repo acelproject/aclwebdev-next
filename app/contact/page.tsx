@@ -49,12 +49,11 @@ const Contact = () => {
           <div className="flex flex-col justify-center">
             <div className="flex items-center gap-x-4">
               <span className="w-[30px] h-[2px] bg-primary"></span>
-              Say Hello 👋
+              Hello 👋
             </div>
             <h1 className="h1 max-w-md mb-8">Let's Work Together</h1>
             <p className="subtitle max-w-[400px] ">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Perspiciatis, libero nostrum? Necessitatibus minus vel nam.
+            I'am always open to discussing product design, collaborating work or partnerships. Just contact me here 
             </p>
           </div>
           {/* ilustration */}

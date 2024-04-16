@@ -37,9 +37,9 @@ export function TabsDemo() {
       value: "personal",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl text-xl md:text-4xl p-10 font-bold text-slate-700 dark:text-white dark:bg-secondary bg-white border shadow-md">
-          <p className="mb-4">Yuk, berkenalan Dengan Saya!</p>
+          <p className="mb-4">Let's get acquainted with me!</p>
           <DummyContent
-            text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ex sit accusamus iusto quod qui laboriosam id dolor commodi rerum?"
+            text="Hello everyone! saya Marchel Lumimpah a fullstack Developer. This is my personal data"
             value="personal"
           />
         </div>
@@ -50,9 +50,9 @@ export function TabsDemo() {
       value: "qual",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl text-xl md:text-4xl p-10 font-bold text-slate-700 dark:text-white dark:bg-secondary bg-white border shadow-md">
-          <p className="mb-4">Perjalanan Karir</p>
+          <p className="mb-4">career journey</p>
           <DummyContent
-            text="Lorem ipsum dolor sit amet consectetur adipisicing elit. A eius similique beatae. Expedita eaque facere laudantium, repudiandae consequatur iure illo? konten 2"
+            text="i am a intermediate experienced. This is my career journey"
             value="qual"
           />
         </div>
@@ -63,9 +63,9 @@ export function TabsDemo() {
       value: "skills",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl text-xl md:text-4xl p-10 font-bold text-slate-700 dark:text-white dark:bg-secondary bg-white border shadow-md">
-          <p className="mb-4">Skill Yang Dikuasai</p>
+          <p className="mb-4">My skills</p>
           <DummyContent
-            text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque corrupti ratione quasi quas, commodi quos."
+            text="These are some tech stack and tools that I've learned and experienced"
             value=""
           />
         </div>
@@ -322,7 +322,7 @@ const DummyContent = ({ text, value }: { text: string; value: string }) => {
         <div className="flex flex-col gap-y-6">
           <div className="text-sm font-normal flex flex-col gap-y-2">
             <h4 className="text-primary text-xl font-semibold ">
-              Fullstack Tools Skills
+              Tech stack & skills
             </h4>
             <div className="border-b dark:border-slate-700 border-border"></div>
             {/* Skill list */}

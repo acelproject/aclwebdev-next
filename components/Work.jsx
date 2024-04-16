@@ -51,14 +51,13 @@ const projectsData = [
 
 const Work = () => {
   return (
-    <section className="relative mb-12 xl:mb-48">
+    <section className="relative mb-12 xl:mb-48 mt-12 md:mt-20">
       <div className="container mx-auto">
         {/* text */}
         <div className="max-w-[400px] mx-auto xl:mx-0 text-center xl:text-left mb-12 xl:h-[400px] flex flex-col justify-center">
           <h2 className="section-title mb-4 md:text-start text-center md:mx-0 mx-auto ">Latest Projects</h2>
           <p className="subtitle mb-8">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. At aliquam
-            ut repellat obcaecati ullam adipisci.
+            I've created a few project while i was learning about fullstack website development and all of project i'll explain below.
           </p>
           <Link href={`/projects`}>
             <Button>All Projects</Button>

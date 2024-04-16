@@ -62,12 +62,12 @@
 }
 
 .h1 {
-  @apply text-4xl md:text-4xl xl:text-[69px] xl:leading-[80px] tracking-[-2px] font-bold;
+  @apply text-4xl md:text-4xl xl:text-[65px] xl:leading-[65px] tracking-[-2px] font-bold;
 }
 
 
-.subtitel {
-  @apply text-muted-foreground text-lg  mb-8 font-normal;
+.subtitle {
+  @apply text-muted-foreground text-lg md:text-xl mb-8 font-normal;
 }
 
 .badge {

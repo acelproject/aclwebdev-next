@@ -28,7 +28,7 @@ export default function Home() {
     <main className="">
       <Hero />
       <About />
-      <Services/>
+      {/* <Services/> */}
       <Work/>
       <Reviews/>
       <Cta/>

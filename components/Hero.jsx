@@ -21,7 +21,7 @@ const Hero = () => {
   const { data: session, status } = useSession();
   return (
     <section className=" flex justify-center items-center py-12 xl:py-16 h-[100vh]  bg-hero bg-no-repeat bg-bottom dark:bg-none bg-cover">
-      <div className="container mx-auto pt-20">
+      <div className="container mx-auto pt-10">
         <div className="flex gap-x-8 justify-between  ">
           {/* text */}
           <div className="flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left">
@@ -35,9 +35,8 @@ const Hero = () => {
             ) : (
               <h1 className="h1 mb-4">Hello, my name is Marchel Lumimpah</h1>
             )}
-            <p className="subtitel max-w-[490px] mx-auto xl:mx-0">
-              Brief description with insights into myself, my vocational
-              journey, and what i engege in profesionally.{" "}
+            <p className="subtitle max-w-[490px] mx-auto xl:mx-0">
+              I create stunning website for your business intermediate experienced in web design and development.{" "}
             </p>
             {/* buttons */}
             <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
@@ -63,22 +62,23 @@ const Hero = () => {
               containerStyles={`absolute top-[24%] -left-[5rem]`}
               icon={<RiBriefcase4Fill />}
               endCountNum={3}
+              endCountText={`+`}
               badgeText="Years Of Experience"
             />
             {/* bedge 2 */}
             <Badge
               containerStyles={`absolute top-[55%] -right-8`}
               icon={<RiTeamFill />}
-              endCountNum={9}
-              endCountText={`k`}
-              badgeText="Happy Clients"
+              endCountNum={10}
+              endCountText={`+`}
+              badgeText="Clients"
             />
             {/* bedge 3 */}
             <Badge
               containerStyles={`absolute top-[80%] -left-[1rem]`}
               icon={<RiTodoFill />}
-              endCountNum={6}
-              endCountText={`k`}
+              endCountNum={10}
+              endCountText={`+`}
               badgeText="Finished Projects"
             />
             <div className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2"></div>

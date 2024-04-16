@@ -32,6 +32,6 @@
     "components/Services.jsx",
     "components/Badge.jsx",
     "components/Cta.jsx"
-, "components/Form.jsx", "app/api/message/route.js"  ],
+, "components/Form.jsx", "app/api/message/route.js", "app/reviews/page.jsx"  ],
   "exclude": ["node_modules"]
 }
