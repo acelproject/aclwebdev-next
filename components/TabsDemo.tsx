@@ -50,9 +50,9 @@ export function TabsDemo() {
       value: "qual",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl text-xl md:text-4xl p-10 font-bold text-slate-700 dark:text-white dark:bg-secondary bg-white border shadow-md">
-          <p className="mb-4">career journey</p>
+          <p className="mb-4">Career journey</p>
           <DummyContent
-            text="i am a intermediate experienced. This is my career journey"
+            text="I am a intermediate experienced. This is my career journey"
             value="qual"
           />
         </div>

@@ -51,13 +51,16 @@ const projectsData = [
 
 const Work = () => {
   return (
-    <section className="relative mb-12 xl:mb-48 mt-12 md:mt-20">
+    <section className="relative mb-9 xl:mb-48 mt-12 md:mt-20">
       <div className="container mx-auto">
         {/* text */}
         <div className="max-w-[400px] mx-auto xl:mx-0 text-center xl:text-left mb-12 xl:h-[400px] flex flex-col justify-center">
-          <h2 className="section-title mb-4 md:text-start text-center md:mx-0 mx-auto ">Latest Projects</h2>
+          <h2 className="section-title mb-4 md:text-start text-center md:mx-0 mx-auto ">
+            Latest Projects
+          </h2>
           <p className="subtitle mb-8">
-            I've created a few project while i was learning about fullstack website development and all of project i'll explain below.
+            I've created a few project while i was learning about fullstack
+            website development and all of project i'll explain below.
           </p>
           <Link href={`/projects`}>
             <Button>All Projects</Button>
@@ -75,7 +78,7 @@ const Work = () => {
             }}
             spaceBetween={30}
             modules={[Pagination]}
-            pagination={{ clickable: true }}
+            pagination={{ clickable: true, el: ".pagination" }}
           >
             {/* show only the first 3 projets for the slides */}
             {projectsData.slice(0.3).map((project, i) => {
@@ -86,6 +89,7 @@ const Work = () => {
               );
             })}
           </Swiper>
+            <div className="pagination    flex justify-center"></div>
         </div>
       </div>
     </section>

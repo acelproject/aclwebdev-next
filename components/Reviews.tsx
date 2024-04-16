@@ -84,9 +84,9 @@ const Reviews = () => {
     sliderRef.current.swiper.slideNext();
   }, []);
   return (
-    <section className="mb-12 xl:mb-32">
+    <section className="mb-12 xl:mb-32 mt-16 md:mt-0">
       <div className="container mx-auto relative">
-        <h2 className="section-title mb-12 text-center mx-auto">Reviews</h2>
+        <h2 className="section-title md:mb-12 mb-6 text-center mx-auto">Reviews</h2>
         {/* Slider */}
         <Swiper
           slidesPerView={1}
