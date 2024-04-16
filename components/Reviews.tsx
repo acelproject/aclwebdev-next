@@ -19,6 +19,7 @@ import useSWR from "swr";
 import Link from "next/link";
 
 // image
+import noAvatar from "@/public/noavatar.png"
 
 // const reviewData = [
 //   {
@@ -94,7 +95,7 @@ const Reviews = () => {
                     <div className="flex items-center gap-x-4">
                       {/* image */}
                       <Image
-                        src={person.avatar}
+                        src={noAvatar}
                         alt={person.name}
                         width={70}
                         height={70}
